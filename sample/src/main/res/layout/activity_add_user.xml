@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".AddUserActivity"
+
+    android:background="@drawable/gradient">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/galada"
+                    android:text="Find Family"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/backk"
+                    android:drawablePadding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:onClick="goBack"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/atomic_age"
+            android:gravity="center"
+            android:text="Add the Co-Partner details"
+            android:textColor="#f7f7f7"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="30dp">
+
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape4"
+            android:fontFamily="serif"
+            android:hint="User Name"
+            android:padding="10dp"
+            android:textColor="#595959"
+            android:textColorHint="#595959"
+            android:textSize="16sp"
+            android:textStyle="italic|bold" />
+        <EditText
+                    android:singleLine="true"
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape4"
+            android:fontFamily="serif"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+
+            android:textColor="#595959"
+            android:textColorHint="#595959"
+            android:textSize="16sp"
+            android:textStyle="italic|bold" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Co-Partner"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/shape"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center"
+                android:onClick="onAddUser"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

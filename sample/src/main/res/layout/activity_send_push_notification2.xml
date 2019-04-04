@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@drawable/gradient"
+    tools:context=".SendPushNotification">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/galada"
+                    android:text="Find Family"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/backk"
+                    android:drawablePadding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:onClick="goBack"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Notification To All"
+            android:textStyle="bold|italic"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonSendAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send to All" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSendOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send to One" />
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></Spinner>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_gravity="center">
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape4"
+                android:padding="10dp"
+                android:textStyle="italic|bold"
+                android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Message Title" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/editTextMessage"
+                android:background="@drawable/shape4"
+                android:padding="10dp"
+                android:textStyle="italic|bold"
+                android:layout_margin="3dp"
+                android:hint="Enter Message" />
+            <ImageView
+                android:id="@+id/ivNotificationImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tvNotificationImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape4"
+                android:padding="10dp"
+                android:textStyle="italic|bold"
+                android:layout_margin="3dp"
+                android:textSize="18sp"
+                android:hint="Select/Capture Image"/>
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/editTextImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:hint="Enter Image URL (Optional) " />
+
+            <Button
+                android:id="@+id/buttonSendPush"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape"
+                android:layout_gravity="center"
+                android:text="Send To All"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape"
+                android:layout_gravity="center"
+                android:text="Read Notifications"
+                android:onClick="onReadNotifications"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

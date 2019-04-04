@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/shape"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ivHeadPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/businessman"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tvHeadName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="Joseph"
+                android:drawableLeft="@drawable/idcard"
+                android:drawablePadding="10dp"
+                android:textColor="#7e8a9a" />
+
+            <TextView
+                android:id="@+id/tvHeadMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/aldrich"
+                android:text="9943365588"
+                android:gravity="center"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/phone1"
+                android:textColor="#ff8a8a" />
+
+            <TextView
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:text="View Deatils"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/gradient1"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:textStyle="italic|bold"
+                android:textColor="#fff"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border1"
+        android:layout_margin="10dp"
+        android:id="@+id/l1"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/r1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="#123456"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="RAJINI"
+                    android:textColor="#ff0004"
+                    android:textSize="16dp"
+                    android:textStyle="italic|bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ACTOR"
+                    android:id="@+id/tvOccupation"
+                    android:textColor="#0033dc"
+                    android:textSize="16dp"
+                    android:textStyle="italic|bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="CHENNAI"
+                    android:id="@+id/tvNativePlace"
+                    android:textColor="#7b7b7b"
+                    android:textSize="16dp"
+                    android:textStyle="italic|bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Phone Number"
+                    android:textColor="#e20097"
+                    android:textSize="16dp"
+                    android:textStyle="italic|bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="Rajini@gmail.com"
+                android:id="@+id/tvHeadEmail"
+                android:textColor="#3d9b02"
+                android:textSize="15dp"
+                android:textStyle="italic|bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/tvId"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

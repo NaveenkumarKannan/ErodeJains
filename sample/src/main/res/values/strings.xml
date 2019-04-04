@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Erode Jains</string>
+    <string name="account_balance">Welcome</string>
+    <string name="balance_currency"></string>
+    <string name="balance_amount">Rajuuu</string>
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Welcome!</string>
+    <string name="slide_1_desc">Spare Only 15Min and Save 3lives</string>
+
+    <string name="slide_2_title">Donate Blood</string>
+    <string name="slide_2_desc">Donate Blood for a Reason, Let the reason be Life</string>
+
+    <string name="slide_3_title">Join with Us</string>
+    <string name="slide_3_desc">Everyone need this help</string>
+
+    <string name="slide_4_title">Blood Doners</string>
+    <string name="slide_4_desc">Details with Location and Contact No</string>
+</resources>

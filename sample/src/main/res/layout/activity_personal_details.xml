@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalDetailsActivity"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/galada"
+                    android:text="Find Family"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/backk"
+                    android:drawablePadding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:onClick="goBack"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:text="Personal Details"
+                android:textSize="30sp"
+                android:layout_marginTop="5dp"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Enter the details"
+                android:textColor="#f7f7f7"
+                android:textSize="25dp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/ivHeadPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvHeadPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="5dp"
+                android:hint="Select/Capture Photo"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etHeadName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#78ffffff"
+                    android:fontFamily="serif"
+                    android:hint="Name"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etBgHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:background="#78ffffff"
+                    android:fontFamily="serif"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:hint="Blood Group"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etWifeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:hint="Wife Name"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#78ffffff"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etBgWife"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:hint="Blood Group"
+                    android:background="#78ffffff"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+            </LinearLayout>
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etFatherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="5dp"
+                android:hint="Father's Name"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etGhotre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:hint="Ghotre"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#78ffffff"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etHeadEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:hint="Email id"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#78ffffff"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etHeadMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="5dp"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etNativePlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="5dp"
+                android:hint="Native Place"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+            <EditText
+                    android:singleLine="true"
+                android:id="@+id/etOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="5dp"
+                android:hint="Occupation"
+                android:background="#78ffffff"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                android:background="#79000000"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center"
+                android:onClick="nextPage"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

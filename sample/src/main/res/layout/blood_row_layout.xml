@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/heart1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2mm" />
+
+                <TextView
+                    android:id="@+id/tvBG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="5dp"
+                    android:text="Group"
+                    android:textColor="#ff0101"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:gravity="center"
+                    android:text="Naveen"
+                    android:textColor="#fdfdfd"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+                <TextView
+                    android:id="@+id/tvPhNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="@dimen/card_price_padding_bottom"
+                    android:text="9092931456"
+                    android:textColor="#0026ff"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

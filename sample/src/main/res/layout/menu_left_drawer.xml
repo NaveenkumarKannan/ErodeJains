@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingStart="24dp"
+            android:text="@string/account_balance"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/balance_currency" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/coda"
+                android:text="Rajuuu"
+                android:textColor="#fff"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/home"
+                android:text="Home"/>
+
+            <TextView
+                android:id="@+id/tvOurProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/profile"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:drawablePadding="12dp"
+                android:text="Our Profile"/>
+
+            <TextView
+                android:id="@+id/tvCoPartners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/copartner"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:drawablePadding="12dp"
+                android:text="Our Co-Partners"/>
+
+            <TextView
+                android:id="@+id/tvAddMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/member"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:drawablePadding="12dp"
+                android:text="Add Members"/>
+            <TextView
+                android:id="@+id/tvTicketBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/logout"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:text="Ticket Booking"/>
+            <TextView
+                android:id="@+id/tvNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/notification"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:drawablePadding="12dp"
+                android:text="Notifications"/>
+
+
+            <TextView
+                android:id="@+id/tvPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/print"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:text="Print"/>
+            <TextView
+                android:id="@+id/tvMembersInfo"
+                android:drawableLeft="@drawable/info4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawablePadding="12dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:text="Members Info"/>
+            <TextView
+                android:id="@+id/tvBlood"
+                android:drawableLeft="@drawable/blood1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawablePadding="5dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:text="Blood"/>
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/logout"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic"
+                android:text="Log Out"/>
+
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="240dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:background="@drawable/siva2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Welcome To"
+            android:textColor="#0044ff"
+            android:textSize="24dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SRI JIN SHASAN JAIN SEVA MANDAL"
+            android:textAlignment="center"
+            android:textColor="#09a223"
+            android:textSize="18sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ERODE"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#ff0004"
+            android:textSize="18sp"
+            android:textStyle="italic|bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

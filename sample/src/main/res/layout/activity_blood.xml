@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BloodActivity"
+    android:background="@drawable/gradient2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvPhNo"
+            android:gravity="center"
+            android:drawablePadding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Select Blood Group to filter the details"
+            android:typeface="serif"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter Donors!"
+                android:textColor="#ff0000"
+                android:textSize="25dp"
+                android:visibility="gone"
+                android:textStyle="bold|italic"
+                />
+            <Spinner
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/idSpinner"
+                android:background="#c9c9c9"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvBGShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textColor="#ff0000"
+                android:textSize="25dp"
+                android:textStyle="bold|italic"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Blood Holder Details"
+                android:textColor="#030303"
+                android:textSize="25dp"
+                android:textStyle="bold|italic"
+                />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lvBlood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

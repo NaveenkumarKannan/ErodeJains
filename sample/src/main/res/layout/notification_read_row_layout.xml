@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/shape6"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/shape5"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Notification Heading"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+        <ImageView
+            android:id="@+id/ivNotificationImage"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/shape1"
+            android:padding="5dp" />
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/merienda_one"
+            android:gravity="center"
+            android:text="Notification Content"
+            android:textColor="#1a1a1a"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvNameDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/coda"
+            android:gravity="end"
+            android:padding="5dp"
+            android:text="Raju @ 2012"
+            android:textColor="#636363"
+            android:textSize="11dp"
+            android:textStyle="italic|bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

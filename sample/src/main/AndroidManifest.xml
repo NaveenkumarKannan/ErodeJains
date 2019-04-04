@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yarolegovich.slidingrootnav.sample">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SampleActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Group1" />
+        <activity
+            android:name=".login"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name=".TicketBooking" />
+        <activity android:name=".vijay" />
+        <activity android:name=".ajith" />
+        <activity android:name=".splash" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yarolegovich.slidingrootnav.sample"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".PersonalDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity
+            android:name=".AddressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity
+            android:name=".child1Activity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".child2Activity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity
+            android:name=".child3Activity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity android:name=".ConfirmActivity" />
+        <activity android:name=".ViewDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".AddUserActivity" />
+        <activity android:name=".Firebase.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Firebase.ActivitySendPushNotification" />
+        <activity android:name=".Firebase.DisplayTokenActivity" />
+        <activity android:name=".SendPushNotification" />
+        <activity android:name=".FamilyDetailsActivity" />
+        <activity android:name=".Sign_UP" />
+        <activity android:name=".Notification_read" />
+        <activity android:name=".Splash2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".BloodActivity" />
+        <activity android:name=".SearchMember"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize"/>
+        <activity android:name=".Internet_Connection" />
+
+    </application>
+
+</manifest>

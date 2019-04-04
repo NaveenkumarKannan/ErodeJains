@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".SearchMember">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/galada"
+                    android:text="Find Family"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/backk"
+                    android:drawablePadding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:onClick="goBack"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Search by Name or Phone number"
+            android:background="#fff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="italic|bold" />
+
+        <Spinner
+            android:id="@+id/spinnerSearchOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:hint="Type to search"
+            android:completionThreshold="1"
+            android:id="@+id/suggestion_box"/>
+        <Spinner
+            android:id="@+id/spinnerSearch"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ListView
+            android:id="@+id/lvViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Father Details"
+                    android:textColor="#1a1a1a"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="220dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/person"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:visibility="gone"
+
+                            android:textColor="#1a1a1a"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target Met"
+                            android:gravity="center"
+
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:textStyle="bold|italic"
+                            android:textColor="#38c700"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:background="#123456"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#38c700"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:text="Buy"
+                            android:visibility="gone"
+                            android:textColor="#ffffff"
+                            android:textSize="19dp"
+                            android:textStyle="italic|bold"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+
+                                android:gravity="center"
+                                android:textStyle="bold|italic"
+                                android:textSize="16dp"
+                                android:textColor="#092a4b"
+                                android:padding="2dp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Father's Name"
+
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Email Id"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+
+                                    android:text="1882"
+                                    android:visibility="gone"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Phone Num"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+                                    android:text="1825"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Target 3"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+
+                                    android:text="1825"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Native Place"
+
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+
+                            android:text="Particle Booked at @ "
+                            android:gravity="center"
+                            android:textColor="#afacac"
+                            android:textSize="10dp"
+                            android:textStyle="bold|italic" />
+                        <TextView
+
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Occupation"
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Mothers Detail"
+                    android:textColor="#1a1a1a"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="220dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/lady"
+                            android:id="@+id/commodityivImage"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:visibility="gone"
+                            android:id="@+id/commoditytvName"
+                            android:textColor="#1a1a1a"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target Met"
+                            android:gravity="center"
+                            android:id="@+id/commoditytvType4"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:textStyle="bold|italic"
+                            android:textColor="#38c700"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:background="#123456"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#38c700"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:text="Buy"
+                            android:visibility="gone"
+                            android:textColor="#ffffff"
+                            android:textSize="19dp"
+                            android:textStyle="italic|bold"
+                            android:id="@+id/commoditytvType2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/llAlert">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:id="@+id/commoditytvType3"
+                                android:gravity="center"
+                                android:textStyle="bold|italic"
+                                android:textSize="16dp"
+                                android:textColor="#092a4b"
+                                android:padding="2dp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Father's Name"
+                                    android:id="@+id/commoditytvBuy"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Email Id"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/commoditytvTarget1"
+                                    android:text="1882"
+                                    android:visibility="gone"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Phone Num"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+                                    android:text="1825"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Target 3"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/commoditytvTarget3"
+                                    android:text="1825"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Native Place"
+                                    android:id="@+id/commoditytvSell"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/commoditytvDate"
+                            android:text="Particle Booked at @ "
+                            android:gravity="center"
+                            android:textColor="#afacac"
+                            android:textSize="10dp"
+                            android:textStyle="bold|italic" />
+                        <TextView
+                            android:id="@+id/commoditytvNote"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Occupation"
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Son Details"
+                    android:textColor="#1a1a1a"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="220dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/child"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:visibility="gone"
+
+                            android:textColor="#1a1a1a"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target Met"
+                            android:gravity="center"
+
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:textStyle="bold|italic"
+                            android:textColor="#38c700"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="190dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:background="#123456"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#38c700"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:text="Buy"
+                            android:visibility="gone"
+                            android:textColor="#ffffff"
+                            android:textSize="19dp"
+                            android:textStyle="italic|bold"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+
+                                android:gravity="center"
+                                android:textStyle="bold|italic"
+                                android:textSize="16dp"
+                                android:textColor="#092a4b"
+                                android:padding="2dp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Father's Name"
+
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Email Id"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+
+                                    android:text="1882"
+                                    android:visibility="gone"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Phone Num"
+                                    android:textColor="#c20057"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/commoditytvTarget2"
+                                    android:text="1825"
+                                    android:textColor="#131313"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Target 3"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+
+                                    android:text="1825"
+                                    android:textColor="#7b7b7b"
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Native Place"
+
+                                    android:textSize="16dp"
+                                    android:textStyle="italic|bold" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+
+                            android:text="Particle Booked at @ "
+                            android:gravity="center"
+                            android:textColor="#afacac"
+                            android:textSize="10dp"
+                            android:textStyle="bold|italic" />
+                        <TextView
+
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Occupation"
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
