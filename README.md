@@ -1,3 +1,9 @@
+# Erode Jains
+
+This application contains contacts, sets relationship terms of family members with reference to any selected individual and build information and local timeline for each individual.
+
+This application uses the below navigation drawer library
+
 # SlidingRootNav
 
 The library is a DrawerLayout-like ViewGroup, where a "drawer" is hidden under the content view, which can be shifted to make the drawer visible. It doesn't provide you with a drawer builder.
